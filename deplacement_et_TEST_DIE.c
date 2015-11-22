@@ -469,7 +469,7 @@ int jeu_graphique(int niveau, int* score, int mode_graphique, char mot[50])
                     printf ("5) Certains niveaux contiennent des doubles glaces : lorsque vous passez dessus, ils deviennent des blocs de glace simple. \n");
                     printf ("6) Certains niveaux contiennent des bonus utilisables ! \n");
                     printf ("7) Comme par exemple une potion de legerete, pour passer sans casser la glace. \n");
-                    printf ("8) les potions %c vous permettent de passer sans détruire la glace pendant 6 mouvements! \n", 244);
+                    printf ("8) Les potions %c vous permettent de passer sans détruire la glace pendant 6 mouvements! \n", 244);
                     printf ("10) Certains niveaux contiennent des serrures ! \n");
                     printf ("11) Une cle sera disponible dans le niveau pour ouvrir la serrure et terminer le niveau. \n");
                     printf ("9) Les rochers %c sont mobiles et détruisent tout sur leur passage, attention aux clef! \n");
@@ -564,7 +564,7 @@ int jeu_graphique(int niveau, int* score, int mode_graphique, char mot[50])
         if ((x==xsortie)&&(y==ysortie)&&(nb_cases_eau!=nb_cases_glace))
         {
             system("cls");
-           printf("vous avez oublie %d cases!\n vous avez perdu!", nb_cases_glace-nb_cases_eau);
+           printf("\n\nVous avez oublie %d cases!", nb_cases_glace-nb_cases_eau);
            Sleep(1000);
             afficher_mort(score, niveau, mode_graphique);
 

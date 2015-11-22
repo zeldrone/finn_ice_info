@@ -22,7 +22,7 @@ int sauvegarde_niveau(int valeurs[15][19], char mot[50])
     }
     else
     {
-        allegro_message("le nom est trop long!");
+        allegro_message("Le nom est trop long!");
         return 1;
     }
     sauvegarde = fopen(mot, "w+");
@@ -194,7 +194,7 @@ void editeur_de_case(BITMAP* affiche[15][19], int valeurs[15][19]) //edite les c
     {
         if (compteur%2==1)//si compteur est impair, affiche le pb pour les tp
         {
-            allegro_message("attention!\n les telporteurs sont liées 2 à 2! il ne peut pas y en avoir un nombre impair!");
+            allegro_message("Attention!\n les telporteurs sont lies 2 à 2! Il ne peut pas y en avoir un nombre impair !");
         }
         else test--;
     }
@@ -349,19 +349,19 @@ void menu(BITMAP* buffer, BITMAP* affiche[15][19], char mot[50]){//buffer=ecran 
             {
                 if (strcmp(mot, "aide"))
                 {
-               allegro_message("ce n'est pas une entree valide!");//pop up blindage
+               allegro_message("Ce n'est pas une entree valide!");//pop up blindage
                 }
                 else// affiche laide pour editer
                 {
                     clear_to_color(ecran_noir, makecol(0,0,0));
                     textprintf_ex(ecran_noir, font, 0, LIGNE+3, makecol(255,255,255),-1, "Afin de dessiner un niveau cliquez sur les cases.");
-                    textprintf_ex(ecran_noir, font, 0, 2*(LIGNE+3), makecol(255,255,255),-1, "un clic gauche fais afficher la possibilité suivante");
-                    textprintf_ex(ecran_noir, font, 0, 3*(LIGNE+3), makecol(255,255,255),-1, "un clic droit met une glace a l'emplacement indiqué");
-                    textprintf_ex(ecran_noir, font, 0, 4*(LIGNE+3), makecol(255,255,255),-1, "appuyez sur entree quand vous avez terminé");
-                    textprintf_ex(ecran_noir, font, 0, 5*(LIGNE+3), makecol(255,255,255),-1, "Ce jeu n'est pas multijoueur! poser deux joueurs se soldera par un echec dans l'execution du niveau");
-                    textprintf_ex(ecran_noir, font, 0, 6*(LIGNE+3), makecol(255,255,255),-1, "Les teleporteurs vont pas paires et sont liés dans l'ordre dans le quel vous les implémentez!");
-                    textprintf_ex(ecran_noir, font, 0, 7*(LIGNE+3), makecol(255,255,255),-1, "une seule sortie ou tunnel!! Le tunnel eclipsera la sortie le cas échéant mais plusieurs d'entre eux conduiront a un échec");
-                    textprintf_ex(ecran_noir, font, 0, 8*(LIGNE+3), makecol(255,255,255),-1, "Soyez créatifs!!!");
+                    textprintf_ex(ecran_noir, font, 0, 2*(LIGNE+3), makecol(255,255,255),-1, "Un clic gauche fais afficher la possibilité suivante");
+                    textprintf_ex(ecran_noir, font, 0, 3*(LIGNE+3), makecol(255,255,255),-1, "Un clic droit met une glace a l'emplacement indique");
+                    textprintf_ex(ecran_noir, font, 0, 4*(LIGNE+3), makecol(255,255,255),-1, "Appuyez sur entrer quand vous avez termine");
+                    textprintf_ex(ecran_noir, font, 0, 5*(LIGNE+3), makecol(255,255,255),-1, "Ce jeu n'est pas multijoueur ! Poser deux joueurs se soldera par un echec dans l'execution du niveau");
+                    textprintf_ex(ecran_noir, font, 0, 6*(LIGNE+3), makecol(255,255,255),-1, "Les teleporteurs vont par paires et sont lies dans l'ordre dans lequel vous les implémentez !");
+                    textprintf_ex(ecran_noir, font, 0, 7*(LIGNE+3), makecol(255,255,255),-1, "Une seule sortie ou tunnel!! Le tunnel eclipsera la sortie le cas echeant mais plusieurs d'entre eux conduiront a un echec");
+                    textprintf_ex(ecran_noir, font, 0, 8*(LIGNE+3), makecol(255,255,255),-1, "Soyez creatifs!!!");
                 }
             }
             else//fonction pour editer
@@ -373,12 +373,12 @@ void menu(BITMAP* buffer, BITMAP* affiche[15][19], char mot[50]){//buffer=ecran 
                 if(x==0)//on save
                 {
                     clear_to_color(ecran_noir, makecol(0,0,0));
-                    textprintf_ex(ecran_noir, font, 0, 0, makecol(255,255,255),-1, "entrez le nom de votre niveau");//sauvegarde du lvl
+                    textprintf_ex(ecran_noir, font, 0, 0, makecol(255,255,255),-1, "Entrez le nom de votre niveau");//sauvegarde du lvl
                     worst_writing_ever(mot, buffer, ecran_noir, 1, affiche);
                     if (sauvegarde_niveau(valeurs, mot));//si il a return 1, on repropose ce que lutilisateur veut faire
                     else
                     {
-                        allegro_message("niveau enregistre!");// si sauvegarde niveau return 0, le niveau est enregistre
+                        allegro_message("Niveau enregistre!");// si sauvegarde niveau return 0, le niveau est enregistre
                         x=0;
                     }
                 }

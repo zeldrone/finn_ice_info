@@ -128,15 +128,14 @@ int main()//Preparation du menu du PRJ01
                     {
                             if (mode_graphique!=0)
                             {
-                            // si c'est le premier niveau joué
-
+                            // si un mode graphique est activÃ©
                                     // on initiallise allegro
                                     allegro_init();
                                     // on initialise le mode couleur
                                     set_color_depth(16);
                                     // on installe le clavier
                                     install_keyboard();
-                                    // on démarre le mode graphique
+                                    // on dÃ©marre le mode graphique
                                     set_gfx_mode(GFX_AUTODETECT_WINDOWED, 19*TSPRITE, 15*TSPRITE,0,0);
 
                             }

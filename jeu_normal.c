@@ -161,7 +161,7 @@ void affichage_score(int* score, int score_niveau) //Affichage du score pendant 
 void deplacement(char tab[15][19], int *clef,int score_general, int* score, int *precedent, char changement[50][2], int* emplacement, int* potion, char affiche[15][19], int niveau){
 int i,j,x,y,z=1, test, direction;
 char move;
-//on repère la case avec le joueur
+//on repÃ¨re la case avec le joueur
 for(i=0; i<15; i++){
     for(j=0; j<19; j++)
     {
@@ -184,7 +184,7 @@ if (kbhit()){
 
         move=getch();
         switch (move){
-            // modification en fonction de la direction choisie, incrément du score.
+            // modification en fonction de la direction choisie, incrÃ©ment du score.
             case 's':
                     case_suivante_joueur=tab[y+1][x];
                     changement[*emplacement][0]=x;
@@ -251,7 +251,7 @@ if (case_suivante_joueur>=0)
                                 z=0;
                                 (*potion)--;
                             }
-                //on décale le personage et diminue la glace derrière lui
+                //on dÃ©cale le personage et diminue la glace derriÃ¨re lui
                     i=case_suivante_joueur;
                     tab[changement[*emplacement][1]][changement[*emplacement][0]]=tab[y][x];
                     *precedent= *precedent-z;
@@ -259,7 +259,7 @@ if (case_suivante_joueur>=0)
                     tab[y][x]=*precedent;
                     *precedent=i;
                     *emplacement= *emplacement +1;
-                    // test de la présence d'une clef
+                    // test de la prÃ©sence d'une clef
                     if (*precedent== 100)
                     {
                     *clef= *clef+1;
@@ -354,7 +354,7 @@ case 8:
 }
 int TEST_DIE( char tab[15][19],int clef, int lvl, int *score, int precedent, int mode_graphique){
  int i,j,x, y, xs, ys;
-//on repère la case avec le joueur
+//on repÃ¨re la case avec le joueur
 i=0;
 j=0;
 for(i=0; i<15; i++)
@@ -371,7 +371,7 @@ for(i=0; i<15; i++)
                     }
             }
 
-//test de la condition de mort: entouré de cases a valeur négatives
+//test de la condition de mort: entourÃ© de cases a valeur nÃ©gatives
 
 if ((((tab[y+1][x]<0)&&(tab[y-1][x]<0)&&(tab[y][x+1]<0)&&(tab[y][x-1]<0)&&(clef==0))||(((tab[y+1][x]<0)&&(tab[y-1][x]<0)&&(tab[y][x+1]<0)&&(tab[y][x-1]<0))&&((tab[y+1][x]!=-50)&&((tab[y-1][x]!=-50)&&(tab[y][x+1]!=-50)&&(tab[y][x-1]!=-50))))||(precedent==66))){
 switch(afficher_mort(score, lvl,  mode_graphique))
@@ -393,8 +393,8 @@ int afficher_mort(int* score, int niveau, int mode_graphique)
         BITMAP* buffer;
         buffer=create_bitmap(TSPRITE*19, TSPRITE*15);
         clear_to_color(buffer, makecol(0,0,0));
-        textprintf_ex(buffer, font, TSPRITE*9, TSPRITE*7, makecol(255,255,255),-1,"vous avez perdu! Votre score est de %d", *score );
-        textprintf_ex(buffer, font, TSPRITE*9, TSPRITE*7+LIGNE+3,makecol(255,255,255),-1,"voulez-vous:");
+        textprintf_ex(buffer, font, TSPRITE*9, TSPRITE*7, makecol(255,255,255),-1,"Vous avez perdu! Votre score est de %d", *score );
+        textprintf_ex(buffer, font, TSPRITE*9, TSPRITE*7+LIGNE+3,makecol(255,255,255),-1,"Voulez-vous:");
         textprintf_ex(buffer, font, TSPRITE*9, TSPRITE*7+2*(LIGNE+3), makecol(255,255,255),-1,"1 quitter");
         textprintf_ex(buffer, font, TSPRITE*9, TSPRITE*7+3*(LIGNE+3), makecol(255,255,255),-1,"ou");
         textprintf_ex(buffer, font, TSPRITE*9, TSPRITE*7+4*(LIGNE+3), makecol(255,255,255),-1,"2 recommencer le niveau?");
@@ -413,7 +413,7 @@ int afficher_mort(int* score, int niveau, int mode_graphique)
             }
             else
             {
-                textprintf_ex(buffer, font, TSPRITE*9, TSPRITE*7+5*(LIGNE+3),makecol(255,255,255),-1,"au revoir!");
+                textprintf_ex(buffer, font, TSPRITE*9, TSPRITE*7+5*(LIGNE+3),makecol(255,255,255),-1,"Au revoir!");
                 blit(buffer, screen, 0,0,0,0,TSPRITE*19, TSPRITE*15);
                 rest(500);
                 return 3;
@@ -423,14 +423,14 @@ int afficher_mort(int* score, int niveau, int mode_graphique)
     }
     else
     {gotoligcol(5, 0);
-printf("\t\t vous avez perdu! Votre score est de %d\n", *score);
+printf("\t\t Vous avez perdu! Votre score est de %d\n", *score);
 Sleep(300);
 j=1;
 while(j){
-printf("voulez-vous:\n1 quitter\n ou\n2 recommencer le niveau?\n");
+printf("Voulez-vous:\n1 quitter\n ou\n2 recommencer le niveau?\n");
 scanf("%d", &i);
 if (i==1){
-printf("au revoir!\n");
+printf("Au revoir!\n");
 sleep(200);
 j=0;
 exit(0);
@@ -450,7 +450,7 @@ int i,j;
 // boucle sur tout le tableau
 for(i=0; i<15; i++){
     for(j=0; j<19; j++){
-            //affectation de la valeur du caractère dans le tableau d'affichage
+            //affectation de la valeur du caractÃ¨re dans le tableau d'affichage
         switch (tab[i][j]){
     case -2: affiche[i][j]= 225-18;
     break;
@@ -465,7 +465,7 @@ for(i=0; i<15; i++){
     case -50: affiche[i][j]= 225-19;
     break;//les serrures
     case 100: affiche[i][j]= 225-28;
-    break;//les clés
+    break;//les clÃ©s
     case 2:affiche[i][j]= 225-17;
     break; //le personnage
     case 3: affiche[i][j]=225-16;
@@ -494,7 +494,7 @@ for(i=0; i<15; i++){
 
 void affichage(char changement[50][2], char affiche[15][19], int emplacement){
 int i;
-//on repère la case avec le joueur
+//on repÃ¨re la case avec le joueur
 
 for(i=0; i<emplacement; i++){
 gotoligcol(POS_ECRAN_Y+changement[i][1],POS_ECRAN_X+3*changement[i][0]+1);

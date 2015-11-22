@@ -35,7 +35,7 @@ j=0;
     {
         if(!key[KEY_S])
         {
-            if(!key[KEY_A]) //allegro gère le clavier en qwerty
+            if(!key[KEY_A]) //allegro gÃ¨re le clavier en qwerty
             {
                 if(!key[KEY_D])
                 {
@@ -463,16 +463,16 @@ int jeu_graphique(int niveau, int* score, int mode_graphique, char mot[50])
             }
         printf ("\tRegles :\n");
                     printf ("1) Le but du jeu est d'atteindre la sortie. \n");
-                    printf ("2) Utilisez les touches 2,4,6,8 du pavé ou les touches z,q,s,d pour vous deplacer. \n");
+                    printf ("2) Utilisez les touches 2,4,6,8 du pavÃ© ou les touches z,q,s,d pour vous deplacer. \n");
                     printf ("3) Lorsque vous passez sur un bloc de glace, il disparait et laisse place a de l'eau. \n");
                     printf ("4) Vous ne pouvez pas passer sur de l'eau, donc si vous vous entourez d'eau, vous perdez \n");
                     printf ("5) Certains niveaux contiennent des doubles glaces : lorsque vous passez dessus, ils deviennent des blocs de glace simple. \n");
                     printf ("6) Certains niveaux contiennent des bonus utilisables ! \n");
                     printf ("7) Comme par exemple une potion de legerete, pour passer sans casser la glace. \n");
-                    printf ("8) les potions %c vous permettent de passer sans détruire la glace pendant 6 mouvements! \n", 244);
+                    printf ("8) les potions %c vous permettent de passer sans dÃ©truire la glace pendant 6 mouvements! \n", 244);
                     printf ("10) Certains niveaux contiennent des serrures ! \n");
                     printf ("11) Une cle sera disponible dans le niveau pour ouvrir la serrure et terminer le niveau. \n");
-                    printf ("9) Les rochers %c sont mobiles et détruisent tout sur leur passage, attention aux clef! \n");
+                    printf ("9) Les rochers %c sont mobiles et dÃ©truisent tout sur leur passage, attention aux clef! \n");
                     printf ("12) S'amuser !\n");
 
         }
@@ -495,6 +495,7 @@ int jeu_graphique(int niveau, int* score, int mode_graphique, char mot[50])
     {
             while(((x!=xsortie)||(y!=ysortie))||(nb_cases_eau!=nb_cases_glace))
             {
+                getconsole_size();
                 emplacement=0;
                 i=0;
                 nb_cases_eau=0;

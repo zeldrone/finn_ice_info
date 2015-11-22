@@ -1,6 +1,16 @@
 #include "header.h"
 #include "header_allegro.h"
 #include <winalleg.h>
+void getconsole()
+{
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    int colonnes, lignes;
+    GetConsoleSceenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE),&csbi);
+    conlonnes=csbi.srWindow.Right-bcsbi.srWindow.Left+1;
+    lignes = csbi.srWindow.Bottom-csbi.srWindow.Top+1;
+    If (colonnes>87) POS_ECRAN_X=colonnes/4;
+    POS_ECRAN_Y = lignes/4;
+}
 void intitialisation_rec(FILE* niveau_rec, char tab[15][19])
 {
     int i,j;

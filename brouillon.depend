@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1447008487 source:c:\users\baptiste\documents\fichiers ece\code blocks\brouillon\brouillon.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1447107936 source:c:\users\baptiste\appdata\roaming\skype\my skype received files\main(1).c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1447672413 source:c:\users\baptiste\documents\fichiers ece\code blocks\brouillon\deplacement et test_die.c
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"header.h"
+	"header_allegro.h"
+	<allegro.h>
+
+1448129043 c:\users\baptiste\documents\fichiers ece\code blocks\brouillon\header.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+
+1447671281 source:c:\users\baptiste\documents\fichiers ece\code blocks\brouillon\main(1).c
+	<windows.h>
+	"header.h"
+
+1448129022 source:c:\users\baptiste\documents\fichiers ece\code blocks\brouillon\jeu_normal.c
+	"header.h"
+	"header_allegro.h"
+	<winalleg.h>
+
+1448054715 c:\users\baptiste\documents\fichiers ece\code blocks\brouillon\header_allegro.h
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1448129395 source:c:\users\baptiste\documents\fichiers ece\code blocks\brouillon\level_editor.c
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"header.h"
+	"header_allegro.h"
+	<allegro.h>
+
+1448129067 source:c:\users\baptiste\documents\fichiers ece\code blocks\brouillon\deplacement_et_test_die.c
+	<allegro.h>
+	<winalleg.h>
+	"header_allegro.h"
+	"header.h"
+
+1448127812 source:c:\users\baptiste\documents\fichiers ece\code blocks\brouillon\main1.c
+	<allegro.h>
+	<winalleg.h>
+	"header.h"
+

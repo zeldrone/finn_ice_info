@@ -24,14 +24,14 @@ void mes_niveaux(int* score, int mode_graphique)
     fscanf(nom_des_fichiers, "%d", &i);
     while(x)
     {
-    printf("quel est le nom du niveau?\n");
+    printf("Quel est le nom du niveau?\n");
     scanf("%s", mot);
     if (strlen(mot)<44)
     {
         strcat(mot, ".txt");
         x=0;
     }
-    else printf("ce nom est trop long\n");
+    else printf("Ce nom est trop long\n");
     }
     x=1;
         while(i)
@@ -128,7 +128,7 @@ int main()//Preparation du menu du PRJ01
                     {
                             if (mode_graphique!=0)
                             {
-                            // si c'est le premier niveau joué
+                            // si c'est le premier niveau jouÃ©
 
                                     // on initiallise allegro
                                     allegro_init();
@@ -136,7 +136,7 @@ int main()//Preparation du menu du PRJ01
                                     set_color_depth(16);
                                     // on installe le clavier
                                     install_keyboard();
-                                    // on démarre le mode graphique
+                                    // on dÃ©marre le mode graphique
                                     set_gfx_mode(GFX_AUTODETECT_WINDOWED, 19*TSPRITE, 15*TSPRITE,0,0);
 
                             }

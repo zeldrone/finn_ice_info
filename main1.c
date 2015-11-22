@@ -63,7 +63,7 @@ void fonction_scores (score)
 void fonction_options (int* score, int* mode_graphique, int *mode_son)
 {
     int choix;
-    printf ("souhaitez-vous:\n1 activer le son\n2 paser en mode graphique\n3 passer en mode graphique et rejoindre le cote obscur de la force\n");
+    printf ("Souhaitez-vous:\n1 Activer le son\n2 Passer en mode graphique\n3 Passer en mode graphique et rejoindre le cote obscur de la force\n");
     scanf("%d", &choix );
     switch (choix)
     {
@@ -98,7 +98,7 @@ void fonction_admin (int mode_graphique, int* score)
         x=0;
         break;
     default:
-        printf("ce n'est pas une entree valide!\nveuillez essayer a nouveau:");
+        printf("Ce n'est pas une entree valide!\nVeuillez essayer a nouveau:");
     }
    }
 }
@@ -115,8 +115,8 @@ int main()//Preparation du menu du PRJ01
     while (x==0)//Infini au cas ou l'utilisateur n'ecrit pas qq chose de correct
     {
         printf("\t\t\t MENU \n");
-            printf("\tmettez IMPERATIVEMENT la console en PLEIN ECRAN\n");
-            printf ("\t    ecrivez sans fautes d'orthographe! \n");
+            printf("\tMettez la console en PLEIN ECRAN\n");
+            printf ("\t    Ecrivez sans fautes d'orthographe! \n");
             printf ("Ecrivez 'jouer' pour commencer a jouer ! \n");
             printf ("Ecrivez 'reprendre' pour reprendre votre partie sauvegardee ! \n");
             printf ("Ecrivez 'tutoriel' si vous jouez pour la premiere fois ! \n");

@@ -17,3 +17,4 @@ int TEST_DIE( char tab[15][19],int clef, int lvl, int *score, int precedent, int
 int afficher_mort(int* score, int niveau, int mode_graphique);
 void update_tab_affiche(char tab[15][19], char affiche[15][19]);
 void affichage(char changement[50][2], char affiche[15][19], int emplacement);
+void getconsole_size();

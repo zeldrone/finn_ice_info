@@ -126,6 +126,7 @@ int main()//Preparation du menu du PRJ01
                 scanf ("%s",imput);
                 if (strcmp (imput,"jouer")==0)
                     {
+                        getconsole_size();
                             if (mode_graphique!=0)
                             {
                             // si c'est le premier niveau joué

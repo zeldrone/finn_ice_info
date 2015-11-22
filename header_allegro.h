@@ -3,10 +3,11 @@
 #include <stdlib.h>
 #include <math.h>
 #define TSPRITE 32
-#define POS_ECRAN_Y 5
-#define POS_ECRAN_X 100
-#define LIGNE text_height
+#define LIGNE text_height(font)
 #define NBSPRITE 18
+
+int POS_ECRAN_Y;
+int POS_ECRAN_X;
 
 void update_tab_affiche(char tab[15][19], char affiche[15][19]);
 void update_affichage_graphique(char tab[15][19], BITMAP* affiche[15][19], BITMAP* affiche2[11], int mode_graphique);
@@ -17,3 +18,4 @@ BITMAP* affiche_buffer(BITMAP* affiche[15][19]);
 void init_mode_graphique(int mode_graphique,BITMAP* affiche2[11]);
 void level_editor();
 void menu(BITMAP* buffer, BITMAP* affiche[15][19], char mot[50]);
+void getconsole_size();

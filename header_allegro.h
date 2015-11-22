@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#define TSPRITE 32
+#define POS_ECRAN_Y 5
+#define POS_ECRAN_X 100
+#define LIGNE text_height
 #define NBSPRITE 18
 
 void update_tab_affiche(char tab[15][19], char affiche[15][19]);
